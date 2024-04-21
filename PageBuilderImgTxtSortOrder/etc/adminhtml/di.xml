@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Funky Squid Labs Ltd. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="AppearanceSourceImgTxt" type="Magento\PageBuilder\Model\Source\VisualSelect">
+        <arguments>
+            <argument name="optionsSize" xsi:type="string">large</argument>
+            <argument name="optionsData" xsi:type="array">
+                <item name="default" xsi:type="array">
+                    <item name="value" xsi:type="string">default</item>
+                    <item name="title" xsi:type="string" translate="true">Default</item>
+                </item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="ImgTxtSortOrderSource" type="Magento\PageBuilder\Model\Source\VisualSelect">
+        <arguments>
+            <argument name="optionsSize" xsi:type="string">small</argument>
+            <argument name="optionsData" xsi:type="array">
+                <item name="0" xsi:type="array">
+                    <item name="value" xsi:type="string">1</item>
+                    <item name="title" xsi:type="string" translate="true">First</item>
+                    <item name="icon" xsi:type="string">FunkySquid_PageBuilderImgTxtSortOrder::css/images/content-type/imgtxtsortorder/appearance/left.svg</item>
+                </item>
+                <item name="2" xsi:type="array">
+                    <item name="value" xsi:type="string">2</item>
+                    <item name="title" xsi:type="string" translate="true">Last</item>
+                    <item name="icon" xsi:type="string">FunkySquid_PageBuilderImgTxtSortOrder::css/images/content-type/imgtxtsortorder/appearance/right.svg</item>
+                </item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\PageBuilder\Model\Config\ContentType\AdditionalData\Provider\Wysiwyg\Config">
+        <arguments>
+            <argument name="editors" xsi:type="array">
+                <item name="mage/adminhtml/wysiwyg/tiny_mce/tinymce4Adapter" xsi:type="array">
+                    <item name="component_initializers" xsi:type="array">
+                        <item name="funkysquid_imgtxtsortorder_form" xsi:type="string">FunkySquid_PageBuilderImgTxtSortOrder/js/content-type/imgtxtsortorder/wysiwyg/tinymce4/component-initializer</item>
+                    </item>
+                    <item name="config_modifiers" xsi:type="array">
+                        <item name="funkysquid_imgtxtsortorder" xsi:type="string">FunkySquid_PageBuilderImgTxtSortOrder/js/content-type/imgtxtsortorder/wysiwyg/tinymce4/config-modifier</item>
+                    </item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+</config>

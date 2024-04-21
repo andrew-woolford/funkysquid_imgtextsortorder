@@ -1,0 +1,141 @@
+// -------------------------------------------------------
+// Copyright © Funky Squid Labs Ltd. All rights reserved.
+// See COPYING.txt for license details.
+// -------------------------------------------------------
+
+// Variables:
+@color-orange: #fbae11;
+@color-white: #fff;
+@color-medium-grey: #767676;
+@color-dark-grey: #333333;
+
+//
+//  Default appearance styles.
+//  _____________________________________________
+& when (@media-common = true) {
+  [data-content-type="funkysquid_imgtxtsortorder"] {
+    max-width: 1250px;
+    margin: 0 auto;
+    .column-wrap {
+      .column_content {
+        padding: 8% 0 6%;
+        h2 {
+          font-size: 32px;
+          line-height: 40px;
+        }
+        p {
+          font-size: 20px;
+          line-height: 32px;
+        }
+      }
+    }
+  }
+}
+
+//
+//  600px and above appearance styles.
+//  _____________________________________________
+//@media screen and (min-width: @screen_cs) {
+//  [data-content-type="funkysquid_pagebuilderprojectlist"] {
+//    .column-wrap {
+//      .column_content {
+//
+//      }
+//    }
+//  }
+//}
+
+//
+//  640px and above appearance styles.
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
+  [data-content-type="funkysquid_imgtxtsortorder"] {
+    .column-wrap {
+      .column_content {
+        display: inline-block;
+        width: 100%;
+      }
+    }
+  }
+}
+
+//
+//  768px and above appearance styles.
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  [data-content-type="funkysquid_imgtxtsortorder"] {
+    .column-wrap {
+      .column_content {
+        display: inline-flex;
+        align-items: center;
+        figure {
+          width: 50%;
+        }
+        [data-element="column_content"] {
+          width: 50%;
+          padding: 0 25px 50px 0;
+        }
+      }
+      &.sort-order-2 {
+        figure {
+          order: 2;
+          img {
+            float: right;
+          }
+        }
+      }
+    }
+  }
+}
+
+//
+//  1024px and above appearance styles.
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+  [data-content-type="funkysquid_imgtxtsortorder"] {
+    .column-wrap {
+      .column_content {
+        figure {
+        }
+        h2 {
+          font-size: 40px;
+          line-height: 48px;
+        }
+        p {
+          font-size: 22px;
+          line-height: 32px;
+        }
+        [data-element="column_content"] {
+          padding: 0 30px 75px 0;
+        }
+      }
+    }
+  }
+  .dark {
+    .row-full-width-inner {
+      padding: 150px 25px;
+      .column-wrap {
+        .column_content {
+          [data-element="column_content"] {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+//
+//  1200px and above appearance styles.
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen_cl) {
+  [data-content-type="funkysquid_imgtxtsortorder"] {
+    .column-wrap {
+      .column_content {
+        [data-element="column_content"] {
+          padding: 0 50px 100px 0;
+        }
+      }
+    }
+  }
+}

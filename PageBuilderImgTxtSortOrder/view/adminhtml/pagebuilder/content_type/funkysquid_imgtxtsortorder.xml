@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Funky Squid Labs Ltd. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_PageBuilder:etc/content_type.xsd">
+    <type name="funkysquid_imgtxtsortorder"
+          label="Img/Txt &amp; Sort Order"
+          menu_section="funkysquid"
+          component="Magento_PageBuilder/js/content-type"
+          preview_component="FunkySquid_PageBuilderImgTxtSortOrder/js/content-type/imgtxtsortorder/preview"
+          master_component="FunkySquid_PageBuilderImgTxtSortOrder/js/content-type/imgtxtsortorder/master"
+          form="funkysquid_imgtxtsortorder_form"
+          icon="icon-imgtxtsortorder"
+          sortOrder="9"
+          translate="label">
+        <children default_policy="deny"/>
+        <appearances>
+            <appearance name="default"
+                    default="true"
+                    preview_template="FunkySquid_PageBuilderImgTxtSortOrder/content-type/imgtxtsortorder/default/preview"
+                    master_template="FunkySquid_PageBuilderImgTxtSortOrder/content-type/imgtxtsortorder/default/master"
+                    reader="Magento_PageBuilder/js/master-format/read/configurable">
+                <elements>
+                    <element name="main">
+                        <style name="text_align" source="text_align"/>
+                        <style name="border" source="border_style" converter="Magento_PageBuilder/js/converter/style/border-style"/>
+                        <style name="border_color" source="border_color"/>
+                        <style name="background_color" source="background_color"/>
+                        <style name="background_image" source="background_image" converter="Magento_PageBuilder/js/converter/style/background-image" preview_converter="Magento_PageBuilder/js/converter/style/preview/background-image" persistence_mode="write"/>
+                        <style name="border_width" source="border_width" converter="Magento_PageBuilder/js/converter/style/border-width"/>
+                        <style name="border_radius" source="border_radius" converter="Magento_PageBuilder/js/converter/style/remove-px"/>
+                        <style name="margins" storage_key="margins_and_padding" reader="Magento_PageBuilder/js/property/margins" converter="Magento_PageBuilder/js/converter/style/margins"/>
+                        <style name="padding" storage_key="margins_and_padding" reader="Magento_PageBuilder/js/property/paddings" converter="Magento_PageBuilder/js/converter/style/paddings"/>
+                        <style name="display" source="display" converter="Magento_PageBuilder/js/converter/style/display" preview_converter="Magento_PageBuilder/js/converter/style/preview/display"/>
+                        <attribute name="name" source="data-content-type"/>
+                        <attribute name="appearance" source="data-appearance"/>
+                        <attribute name="order" source="order"/>
+                        <css name="css_classes"/>
+                    </element>
+                    <element name="module_information">
+                        <html name="module_information"/>
+                    </element>
+                    <element name="column_content">
+                        <html name="column_content"/>
+                    </element>
+                    <element name="column_desktop_image">
+                        <style name="border" source="border_style" converter="Magento_PageBuilder/js/converter/style/border-style"/>
+                        <style name="border_color" source="border_color"/>
+                        <style name="border_width" source="border_width" converter="Magento_PageBuilder/js/converter/style/border-width"/>
+                        <style name="border_radius" source="border_radius" converter="Magento_PageBuilder/js/converter/style/remove-px"/>
+                        <static_style source="max-width" value="100%"/>
+                        <static_style source="height" value="auto"/>
+                        <attribute name="column_desktop_image_height" source="height"/>
+                        <attribute name="column_desktop_image_width" source="width"/>
+                        <attribute name="column_desktop_image" source="src" converter="Magento_PageBuilder/js/converter/attribute/src" preview_converter="Magento_PageBuilder/js/converter/attribute/preview/src"/>
+                        <attribute name="column_alt" source="alt"/>
+                        <attribute name="column_title_attribute" source="title"/>
+                    </element>
+                    <element name="column_mobile_image">
+                        <style name="border" source="border_style" converter="Magento_PageBuilder/js/converter/style/border-style"/>
+                        <style name="border_color" source="border_color"/>
+                        <style name="border_width" source="border_width" converter="Magento_PageBuilder/js/converter/style/border-width"/>
+                        <style name="border_radius" source="border_radius" converter="Magento_PageBuilder/js/converter/style/remove-px"/>
+                        <static_style source="max-width" value="100%"/>
+                        <static_style source="height" value="auto"/>
+                        <attribute name="column_mobile_image_height" source="height"/>
+                        <attribute name="column_mobile_image_width" source="width"/>
+                        <attribute name="column_mobile_image" source="src" converter="Magento_PageBuilder/js/converter/attribute/src" preview_converter="Magento_PageBuilder/js/converter/attribute/preview/src"/>
+                        <attribute name="column_alt" source="alt"/>
+                        <attribute name="column_title_attribute" source="title"/>
+                    </element>
+                    <element name="column_link">
+                        <attribute name="column_link_url" reader="Magento_PageBuilder/js/property/link" persistence_mode="read"/>
+                        <attribute name="column_virtual_link_href" storage_key="column_link_url" source="href" converter="Magento_PageBuilder/js/converter/attribute/link-href" persistence_mode="write"/>
+                        <attribute name="column_virtual_link_target" storage_key="column_link_url" source="target" converter="Magento_PageBuilder/js/converter/attribute/link-target" persistence_mode="write"/>
+                        <attribute name="column_virtual_link_type" storage_key="column_link_url" source="data-link-type" converter="Magento_PageBuilder/js/converter/attribute/link-type" persistence_mode="write"/>
+                        <attribute name="column_title_attribute" source="title"/>
+                    </element>
+                    <element name="column_empty_link"/>
+                </elements>
+            </appearance>
+        </appearances>
+        <is_system>true</is_system>
+        <additional_data>
+            <item name="wysiwygConfig" xsi:type="array">
+                <item name="wysiwygConfigData" xsi:type="object">Magento\PageBuilder\Model\Config\ContentType\AdditionalData\Provider\Wysiwyg\Config</item>
+            </item>
+        </additional_data>
+    </type>
+</config>

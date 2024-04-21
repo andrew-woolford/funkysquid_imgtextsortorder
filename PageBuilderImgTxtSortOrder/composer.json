@@ -1,0 +1,20 @@
+{
+    "name": "primrose/pagebuilder-img-txt-sort-order",
+    "description": "Page Builder content type for Page Builder Image and Text with Sort Order.",
+    "_commenmt": "Copyright © Funky Squid Labs Ltd. All rights reserved. See COPYING.txt for license details.",
+    "require": {
+        "magento/framework": "*",
+        "magento/module-page-builder": "*",
+        "php": "~7.3.0||~7.4.0"
+    },
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "proprietary"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ]
+    }
+}

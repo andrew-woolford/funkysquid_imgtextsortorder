@@ -1,0 +1,104 @@
+// -------------------------------------------------------
+// Copyright © Funky Squid Labs Ltd. All rights reserved.
+// See COPYING.txt for license details.
+// -------------------------------------------------------
+
+//
+//  Default appearance styles.
+//  _____________________________________________
+// Required when using a custom SVG icon for your content type in the Page Builder panel
+.icon-imgtxtsortorder {
+  content: url('@{baseDir}FunkySquid_PageBuilderImgTxtSortOrder/css/images/content-type/imgtxtsortorder/appearance/icon-imgtxtsortorder.svg');
+  width: 16px;
+  height: 16px;
+  margin-bottom: -2px;
+  margin-left: 1px;
+}
+
+//
+// Admin styles
+//  _____________________________________________
+.pagebuilder-content-type {
+  &.column-wrapper {
+    border: 1px solid #e8e8e8;
+    .placeholder-readmore-text {
+      padding: 0 20px 10px;
+    }
+    .placeholder-empty {
+      position: relative;
+      display: flex;
+      height: 60px;
+      align-items: center;
+      justify-content: center;
+      background-color: #fafafa;
+      color: #aaa6a0;
+    }
+  }
+}
+
+//  Admin Mobile viewport styles.
+//  _____________________________________________
+.mobile-viewport {
+  .pagebuilder-content-type-wrapper {
+    .pagebuilder-content-type {
+      &.column-wrapper {
+        .pagebuilder-content-container {
+          .placeholder-text {
+            width: 100%;
+            align-items: center;
+            p {
+              font-size: 14px;
+              line-height: 20px;
+            }
+            figure {
+              margin: 0;
+            }
+            [data-role="column_content"] {
+              padding: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//  Admin Desktop viewport styles.
+//  _____________________________________________
+.desktop-viewport {
+  .pagebuilder-content-type-wrapper {
+    .pagebuilder-content-type {
+      .column-wrapper {
+        .pagebuilder-content-container {
+          .placeholder-text {
+            display: inline-flex;
+            flex-direction: initial;
+            width: 100%;
+            align-items: center;
+            vertical-align: middle;
+            figure,
+            [data-role="column_content"] {
+              width: 50%;
+            }
+            figure {
+              margin: 0;
+            }
+            [data-role="column_content"] {
+              padding: 0 25px;
+            }
+          }
+          &.sort-order-2 {
+            .placeholder-text {
+              figure {
+                order: 2;
+                img {
+                  float: right;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

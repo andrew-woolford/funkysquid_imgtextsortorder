@@ -1,0 +1,39 @@
+<!--
+/**
+ * Copyright © Funky Squid Labs Ltd. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<div attr="data.main.attributes" ko-style="data.main.style" css="data.main.css">
+    <div data-bind="attr: {'class': 'column-wrap '+ getOrderClass(data.main)}">
+        <div data-content="true" class="column_content">
+            <figure>
+                <a if="data.column_link.attributes().href" attr="data.column_link.attributes" ko-style="data.column_link.style" css="data.column_link.css">
+                    <img if="data.column_desktop_image.attributes().src"
+                         attr="data.column_desktop_image.attributes"
+                         class="pagebuilder-mobile-hidden"
+                         css="data.column_desktop_image.css"
+                         ko-style="data.column_desktop_image.style"/>
+                    <img if="data.column_mobile_image.attributes().src"
+                         attr="data.column_mobile_image.attributes"
+                         class="pagebuilder-mobile-only"
+                         css="data.column_mobile_image.css"
+                         ko-style="data.column_mobile_image.style" />
+                </a>
+                <ifnot args="data.column_link.attributes().href">
+                    <img if="data.column_desktop_image.attributes().src"
+                         attr="data.column_desktop_image.attributes"
+                         class="pagebuilder-mobile-hidden"
+                         css="data.column_desktop_image.css"
+                         ko-style="data.column_desktop_image.style"/>
+                    <img if="data.column_mobile_image.attributes().src"
+                         attr="data.column_mobile_image.attributes"
+                         class="pagebuilder-mobile-only"
+                         css="data.column_mobile_image.css"
+                         ko-style="data.column_mobile_image.style" />
+                </ifnot>
+            </figure>
+            <div attr="data.column_content.attributes" ko-style="data.main.style" css="data.main.css" html="data.column_content.html"></div>
+        </div>
+    </div>
+</div>

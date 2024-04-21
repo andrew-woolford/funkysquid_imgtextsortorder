@@ -1,0 +1,29 @@
+<!--
+/**
+ * Copyright © Funky Squid Labs Ltd. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<div class="pagebuilder-content-type column-wrapper" attr="data.main.attributes" ko-style="data.main.style" css="data.main.css" event="{ mouseover: onMouseOver, mouseout: onMouseOut }, mouseoverBubble: false">
+    <div data-bind="attr: {'class': 'pagebuilder-content-container '+ getOrderClass(data.main)}">
+        <div class="placeholder-text" if="data.column_content.html">
+            <figure>
+                <img if="data.column_desktop_image.attributes().src"
+                     attr="data.column_desktop_image.attributes"
+                     class="pagebuilder-mobile-hidden"
+                     css="data.column_desktop_image.css"
+                     ko-style="data.column_desktop_image.style"/>
+                <img if="data.column_mobile_image.attributes().src"
+                     attr="data.column_mobile_image.attributes"
+                     class="pagebuilder-mobile-only"
+                     css="data.column_mobile_image.css"
+                     ko-style="data.column_mobile_image.style" />
+            </figure>
+            <div data-role="column_content">
+                <div html="data.column_content.html"></div>
+            </div>
+        </div>
+        <div class="placeholder-empty" ifnot="data.column_content.html" translate="'Enter your image &amp; content'"></div>
+        <render args="getOptions().template"></render>
+    </div>
+</div>

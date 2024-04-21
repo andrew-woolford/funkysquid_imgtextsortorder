@@ -1,0 +1,47 @@
+<!--
+/**
+ * Copyright © Funky Squid Labs Ltd. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<div class="module-info-section">
+    <div class="module-header">
+        <h1>Two Column Image &amp; Text module with Desktop Sort Order.</h1>
+        <img alt="Funky Squid Labs" src="<?php echo $this->getViewFileUrl('FunkySquid_Backend::css/images/new-logo.svg'); ?>" width="300px" height="" />
+    </div>
+    <div class="module-content">
+        <p>This module enables you to have an image and content side by side but also allows you to change the order on desktop, this enables you to create nice layouts which also stack above each other on mobile view.</p>
+        <h2>Module usage</h2>
+        <h3>Desktop image position settings.</h3>
+        <ul class="options">
+            <li>
+                <h4>First option selected</h4>
+                <img alt="" src="<?php echo $this->getViewFileUrl('FunkySquid_PageBuilderImgTxtSortOrder::css/images/content-type/imgtxtsortorder/appearance/appearance1-imgtxtsortorder.svg'); ?>" width="75%"/>
+            </li>
+            <li>
+                <h4>Last option selected</h4>
+                <img alt="" src="<?php echo $this->getViewFileUrl('FunkySquid_PageBuilderImgTxtSortOrder::css/images/content-type/imgtxtsortorder/appearance/appearance3-imgtxtsortorder.svg'); ?>" width="75%"/>
+            </li>
+        </ul>
+        <h3>Image section.</h3>
+        <ul>
+            <li>Add mobile & desktop image by either dragging an image in or clicking to choose from a file location.</li>
+            <li>Add the width and height of the desktop & mobile images.</li>
+            <li>
+                <ul>
+                    <li>Adding the image sizes helps with cumulative layout shift (CLS) other Google errors.</li>
+                </ul>
+            </li>
+        </ul>
+        <h4>Image width sizes.</h4>
+        <p>Create your images with the following max-width's to ensure full coverage from mobile up to desktop.</p>
+        <ul>
+            <li><b>Mobile:</b> max-width 722px</li>
+            <li><b>Desktop:</b> max-width 640px</li>
+        </ul>
+        <h4>Image link.</h4>
+        <p>You can update the image to be a link by adding a url to the image <b>Link</b> section.</p>
+        <h3>Content section.</h3>
+        <p>In the <b>Content Block</b> section you can add your content in here and use the WYSIWYG editor to change styles and links and so on.</p>
+    </div>
+</div>

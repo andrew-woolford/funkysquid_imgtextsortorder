@@ -95,7 +95,7 @@
             </block>
         </htmlContent>
     </fieldset>
-    <fieldset name="column_content" sortOrder="20">
+    <fieldset name="column_content" sortOrder="20" component="Magento_PageBuilder/js/form/element/dependent-fieldset">
         <settings>
             <label translate="true">Image &amp; Content</label>
             <collapsible>true</collapsible>
@@ -220,4 +220,28 @@
             </settings>
         </urlInput>
     </fieldset>
+    <fieldset name="seo" sortOrder="30">
+        <settings>
+            <label translate="true">Search Engine Optimization</label>
+            <collapsible>true</collapsible>
+            <opened>true</opened>
+        </settings>
+        <field name="column_alt" sortOrder="10" formElement="input">
+            <settings>
+                <label translate="true">Alternative Text</label>
+                <validation>
+                    <rule name="validate-string" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+        </field>
+        <field name="column_title_attribute" sortOrder="20" formElement="input">
+            <settings>
+                <label translate="true">Title Attribute</label>
+                <validation>
+                    <rule name="validate-string" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+        </field>
+    </fieldset>
+
 </form>

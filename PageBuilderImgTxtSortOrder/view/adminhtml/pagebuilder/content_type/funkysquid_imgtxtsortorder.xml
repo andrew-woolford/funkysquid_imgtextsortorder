@@ -80,6 +80,7 @@
                         <attribute name="column_title_attribute" source="title"/>
                     </element>
                     <element name="column_empty_link"/>
+
                 </elements>
             </appearance>
         </appearances>

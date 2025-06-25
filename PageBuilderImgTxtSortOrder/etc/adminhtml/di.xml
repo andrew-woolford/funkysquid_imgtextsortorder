@@ -26,10 +26,27 @@
                     <item name="title" xsi:type="string" translate="true">First</item>
                     <item name="icon" xsi:type="string">FunkySquid_PageBuilderImgTxtSortOrder::css/images/content-type/imgtxtsortorder/appearance/left.svg</item>
                 </item>
-                <item name="2" xsi:type="array">
+                <item name="1" xsi:type="array">
                     <item name="value" xsi:type="string">2</item>
                     <item name="title" xsi:type="string" translate="true">Last</item>
                     <item name="icon" xsi:type="string">FunkySquid_PageBuilderImgTxtSortOrder::css/images/content-type/imgtxtsortorder/appearance/right.svg</item>
+                </item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="ImgTxtSortOrderImgType" type="Magento\PageBuilder\Model\Source\VisualSelect">
+        <arguments>
+            <argument name="optionsSize" xsi:type="string">small</argument>
+            <argument name="optionsData" xsi:type="array">
+                <item name="0" xsi:type="array">
+                    <item name="value" xsi:type="string">standard</item>
+                    <item name="title" xsi:type="string" translate="true">Standard</item>
+                    <item name="icon" xsi:type="string">FunkySquid_PageBuilderImgTxtSortOrder::css/images/content-type/imgtxtsortorder/appearance/standard.svg</item>
+                </item>
+                <item name="1" xsi:type="array">
+                    <item name="value" xsi:type="string">cover</item>
+                    <item name="title" xsi:type="string" translate="true">Cover</item>
+                    <item name="icon" xsi:type="string">FunkySquid_PageBuilderImgTxtSortOrder::css/images/content-type/imgtxtsortorder/appearance/cover.svg</item>
                 </item>
             </argument>
         </arguments>

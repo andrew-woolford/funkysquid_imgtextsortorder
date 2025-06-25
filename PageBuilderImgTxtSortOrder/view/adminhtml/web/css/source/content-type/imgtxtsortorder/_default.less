@@ -50,7 +50,7 @@
               font-size: 14px;
               line-height: 20px;
             }
-            figure {
+            div.column-image {
               margin: 0;
             }
             [data-role="column_content"] {
@@ -66,36 +66,30 @@
 //  Admin Desktop viewport styles.
 //  _____________________________________________
 .desktop-viewport {
-  .pagebuilder-content-type-wrapper {
-    .pagebuilder-content-type {
-      .column-wrapper {
-        .pagebuilder-content-container {
-          .placeholder-text {
-            display: inline-flex;
-            flex-direction: initial;
-            width: 100%;
-            align-items: center;
-            vertical-align: middle;
-            figure,
-            [data-role="column_content"] {
-              width: 50%;
-            }
-            figure {
-              margin: 0;
-            }
-            [data-role="column_content"] {
-              padding: 0 25px;
-            }
-          }
-          &.sort-order-2 {
-            .placeholder-text {
-              figure {
-                order: 2;
-                img {
-                  float: right;
-                }
-              }
-            }
+  .pagebuilder-content-type {
+    .placeholder-text {
+      display: flex;
+      flex-direction: initial;
+      width: 100%;
+      align-items: center;
+      vertical-align: middle;
+      div.column-image,
+      [data-role="column_content"] {
+        width: 50%;
+      }
+      div.column-image {
+        margin: 0;
+      }
+      [data-role="column_content"] {
+        padding: 0 25px;
+      }
+    }
+    &.sort-order-2 {
+      .placeholder-text {
+        div.column-image {
+          order: 2;
+          img {
+            float: right;
           }
         }
       }

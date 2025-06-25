@@ -95,13 +95,13 @@
             </block>
         </htmlContent>
     </fieldset>
-    <fieldset name="column_content" sortOrder="20" component="Magento_PageBuilder/js/form/element/dependent-fieldset">
+    <fieldset name="column_content" sortOrder="20">
         <settings>
             <label translate="true">Image &amp; Content</label>
             <collapsible>true</collapsible>
             <opened>true</opened>
         </settings>
-        <field name="column_content" sortOrder="40" formElement="wysiwyg" template="ui/form/field">
+        <field name="column_content" sortOrder="40" formElement="wysiwyg">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="source" xsi:type="string">page</item>
@@ -109,7 +109,7 @@
                         <item name="pagebuilder_button" xsi:type="boolean">false</item>
                         <item name="is_pagebuilder_enabled" xsi:type="boolean">false</item>
                         <item name="toggle_button" xsi:type="boolean">false</item>
-                        <item name="height" xsi:type="string">200px</item>
+                        <item name="height" xsi:type="string">350px</item>
                     </item>
                 </item>
             </argument>
@@ -139,6 +139,24 @@
                 <select>
                     <settings>
                         <options class="ImgTxtSortOrderSource"/>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
+        <field name="image_type" sortOrder="6" formElement="select" component="Magento_PageBuilder/js/form/element/visual-select">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="default" xsi:type="string">1</item>
+                </item>
+            </argument>
+            <settings>
+                <label translate="true">Display Image As</label>
+                <elementTmpl>Magento_PageBuilder/form/element/visual-select</elementTmpl>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <options class="ImgTxtSortOrderImgType"/>
                     </settings>
                 </select>
             </formElements>
@@ -177,6 +195,33 @@
                 </validation>
             </settings>
         </field>
+        <field name="desktop_loading" sortOrder="30" formElement="select">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="default" xsi:type="string">lazy</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Desktop Image Loading</label>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <options>
+                            <option name="0" xsi:type="array">
+                                <item name="value" xsi:type="string">lazy</item>
+                                <item name="label" xsi:type="string" translate="true">Lazy</item>
+                            </option>
+                            <option name="1" xsi:type="array">
+                                <item name="value" xsi:type="string">eager</item>
+                                <item name="label" xsi:type="string" translate="true">Eager</item>
+                            </option>
+                        </options>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
         <field name="column_mobile_image" sortOrder="16" formElement="imageUploader">
             <settings>
                 <label translate="true">Mobile Image</label>
@@ -211,6 +256,33 @@
                 </validation>
             </settings>
         </field>
+        <field name="mobile_loading" sortOrder="33" formElement="select">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="default" xsi:type="string">lazy</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Mobile Image Loading</label>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <options>
+                            <option name="0" xsi:type="array">
+                                <item name="value" xsi:type="string">lazy</item>
+                                <item name="label" xsi:type="string" translate="true">Lazy</item>
+                            </option>
+                            <option name="1" xsi:type="array">
+                                <item name="value" xsi:type="string">eager</item>
+                                <item name="label" xsi:type="string" translate="true">Eager</item>
+                            </option>
+                        </options>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
         <urlInput name="column_link_url" sortOrder="20">
             <settings>
                 <dataType>text</dataType>
@@ -220,28 +292,4 @@
             </settings>
         </urlInput>
     </fieldset>
-    <fieldset name="seo" sortOrder="30">
-        <settings>
-            <label translate="true">Search Engine Optimization</label>
-            <collapsible>true</collapsible>
-            <opened>true</opened>
-        </settings>
-        <field name="column_alt" sortOrder="10" formElement="input">
-            <settings>
-                <label translate="true">Alternative Text</label>
-                <validation>
-                    <rule name="validate-string" xsi:type="boolean">true</rule>
-                </validation>
-            </settings>
-        </field>
-        <field name="column_title_attribute" sortOrder="20" formElement="input">
-            <settings>
-                <label translate="true">Title Attribute</label>
-                <validation>
-                    <rule name="validate-string" xsi:type="boolean">true</rule>
-                </validation>
-            </settings>
-        </field>
-    </fieldset>
-
 </form>

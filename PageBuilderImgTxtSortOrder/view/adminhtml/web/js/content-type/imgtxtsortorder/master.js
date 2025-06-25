@@ -5,7 +5,7 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-define(["underscore", "Magento_PageBuilder/js/utils/object", "Magento_PageBuilder/js/content-type/appearance-config"], function (_underscore, _object, _appearanceConfig) {
+define(["underscore", "Magento_PageBuilder/js/utils/object", "Magento_PageBuilder/js/content-type/appearance-config", "Magento_PageBuilder/js/content-type/master"], function (_underscore, _object, _appearanceConfig) {
   /**
    * Copyright © Magento, Inc. All rights reserved.
    * See COPYING.txt for license details.
@@ -27,22 +27,9 @@ define(["underscore", "Magento_PageBuilder/js/utils/object", "Magento_PageBuilde
       this.observableUpdater = observableUpdater;
       this.bindEvents();
     }
-    /**
-     * Retrieve the render template
-     *
-     * @returns {string}
-     */
-
 
     var _proto = Master.prototype;
 
-    /**
-     * Get content type data
-     *
-     * @param {string} element
-     * @returns {DataObject}
-     * @deprecated
-     */
     _proto.getData = function getData(element) {
       var data = _underscore.extend({}, this.contentType.dataStore.getState());
 
@@ -60,19 +47,11 @@ define(["underscore", "Magento_PageBuilder/js/utils/object", "Magento_PageBuilde
       }
 
       return result;
-    }
-    /**
-     * Destroys current instance
-     */
-    ;
+    };
 
     _proto.destroy = function destroy() {
       return;
-    }
-    /**
-     * Attach event to updating data in data store to update observables
-     */
-    ;
+    };
 
     _proto.bindEvents = function bindEvents() {
       var _this = this;
@@ -80,21 +59,11 @@ define(["underscore", "Magento_PageBuilder/js/utils/object", "Magento_PageBuilde
       this.contentType.dataStore.subscribe(function () {
         _this.updateObservables();
       });
-    }
-    /**
-     * After observables updated, allows to modify observables
-     */
-    ;
+    };
 
     _proto.afterObservablesUpdated = function afterObservablesUpdated() {
       return;
-    }
-    /**
-     * Update observables
-     *
-     * @deprecated
-     */
-    ;
+    };
 
     _proto.updateObservables = function updateObservables() {
       this.observableUpdater.update(this, _underscore.extend({
@@ -108,12 +77,20 @@ define(["underscore", "Magento_PageBuilder/js/utils/object", "Magento_PageBuilde
      *
      * @param element
      */
-    ;
-
     _proto.getOrderClass = function getOrderClass(element) {
       var attributesObject = element.attributes();
-      return attributesObject['order'] ? 'sort-order-'+attributesObject['order'] : '';
-    }
+      return attributesObject['order'] ? 'sort-order-' + attributesObject['order'] : '';
+    };
+
+    /**
+     * Return image type class if available
+     *
+     * @param element
+     */
+    _proto.getImageType = function getImageType(element) {
+      var attributesObject = element.attributes();
+      return attributesObject['image_type'] ?  'image-type-' + attributesObject['image_type'] : '';
+    };
 
     _createClass(Master, [{
       key: "template",
@@ -127,4 +104,3 @@ define(["underscore", "Magento_PageBuilder/js/utils/object", "Magento_PageBuilde
 
   return Master;
 });
-//# sourceMappingURL=master.js.map

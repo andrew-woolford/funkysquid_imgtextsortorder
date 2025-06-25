@@ -5,9 +5,9 @@
  */
 -->
 <div class="pagebuilder-content-type column-wrapper" attr="data.main.attributes" ko-style="data.main.style" css="data.main.css" event="{ mouseover: onMouseOver, mouseout: onMouseOut }, mouseoverBubble: false">
-    <div data-bind="attr: {'class': 'pagebuilder-content-container '+ getOrderClass(data.main)}">
+    <div data-bind="attr: { class: 'pagebuilder-content-type ' + getOrderClass() + ' ' + getImageType() }">
         <div class="placeholder-text" if="data.column_content.html">
-            <figure>
+            <div class="column-image">
                 <img if="data.column_desktop_image.attributes().src"
                      attr="data.column_desktop_image.attributes"
                      class="pagebuilder-mobile-hidden"
@@ -18,7 +18,7 @@
                      class="pagebuilder-mobile-only"
                      css="data.column_mobile_image.css"
                      ko-style="data.column_mobile_image.style" />
-            </figure>
+            </div>
             <div data-role="column_content">
                 <div html="data.column_content.html"></div>
             </div>

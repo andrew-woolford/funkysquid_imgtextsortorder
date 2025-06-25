@@ -3,69 +3,23 @@
 // See COPYING.txt for license details.
 // -------------------------------------------------------
 
-// Variables:
-@color-orange: #fbae11;
-@color-white: #fff;
-@color-medium-grey: #767676;
-@color-dark-grey: #333333;
-
 //
-//  Default appearance styles.
-//  _____________________________________________
-& when (@media-common = true) {
-  [data-content-type="funkysquid_imgtxtsortorder"] {
-    margin: 0 auto;
-    .column-wrap {
-      .column_content {
-        padding: 8% 0 6%;
-        h2 {
-          font-size: 32px;
-          line-height: 40px;
-        }
-        p {
-          font-size: 20px;
-          line-height: 32px;
-        }
-      }
-    }
-  }
-}
-
-//
-//  640px and above appearance styles.
-//  _____________________________________________
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
-  [data-content-type="funkysquid_imgtxtsortorder"] {
-    .column-wrap {
-      .column_content {
-        display: inline-block;
-        width: 100%;
-      }
-    }
-  }
-}
-
-//
-//  768px and above appearance styles.
+//  Default styles.
 //  _____________________________________________
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
   [data-content-type="funkysquid_imgtxtsortorder"] {
     .column-wrap {
-      .column_content {
-        display: inline-flex;
-        align-items: center;
-        figure {
-          width: 50%;
-        }
-        [data-element="column_content"] {
-          width: 50%;
-        }
-      }
-      &.sort-order-2 {
-        figure {
-          order: 2;
+      &.image-type-cover {
+        .column-image {
+          height: auto;
+          overflow: hidden;
           img {
-            float: right;
+            display: block;
+            width: 100%;
+            height: 100% !important;
+            max-height: 100%;
+            object-fit: cover;
+            object-position: center;
           }
         }
       }
@@ -79,28 +33,23 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
   [data-content-type="funkysquid_imgtxtsortorder"] {
     .column-wrap {
-      .column_content {
-        figure {
-        }
-        h2 {
-          font-size: 40px;
-          line-height: 48px;
-        }
-        p {
-          font-size: 22px;
-          line-height: 32px;
+      .column_content_wrapper {
+        display: grid;
+        grid-template-columns: 49% 49%;
+        gap: 2%;
+        align-items: stretch;
+        [data-element="column_content"] {
+            display: flex;
+            padding: 0;
+            flex-direction: column;
+            justify-content: center;
         }
       }
-    }
-  }
-  .dark {
-    .row-full-width-inner {
-      padding: 150px 25px;
-      .column-wrap {
-        .column_content {
-          [data-element="column_content"] {
-            padding: 0;
-          }
+      &.sort-order-2 {
+        .column-image {
+          display: flex;
+          order: 2;
+          align-items: center;
         }
       }
     }

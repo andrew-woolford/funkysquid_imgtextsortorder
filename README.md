@@ -29,3 +29,5 @@ This module is great for creating more engaging layout for your clients.
 
 > :bug:
 > Here is a list of known bugs.
+> ----
+> * Cover image does not work fully

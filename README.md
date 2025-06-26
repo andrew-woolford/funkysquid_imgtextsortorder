@@ -27,7 +27,7 @@ This module is great for creating more engaging layout for your clients.
 > [!NOTE]  
 > When instaling this module in the app/code folder you needs to create a folder called FunkySquid and place the code inside that.
 
-> :bug:
+> :bug: :beetle:
 > Here is a list of known bugs.
 > ----
 > * Cover image does not work fully

@@ -4,7 +4,9 @@
 
 ## FunkySquid_PageBuilderImgTxtSortOrder
 
-This module is creates two blocks one which is an image the other a text area, these stack on each other when on mobile and side by side on desktop. When on desktop you have the choice to select the position of the image block so you can set it to be aligned left or right on the desktop view in a browser.
+This module is creates two blocks one which is an image the other a text area, these stack on each other when on mobile and side by side on desktop.
+
+When on desktop you have the choice to select the position of the image block so you can set it to be aligned left or right on the desktop view in a browser.
 
 This module is great for creating more engaging layout for your clients.
 

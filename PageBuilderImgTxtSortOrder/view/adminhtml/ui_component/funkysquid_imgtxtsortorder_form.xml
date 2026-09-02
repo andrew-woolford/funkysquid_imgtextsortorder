@@ -76,25 +76,6 @@
             </formElements>
         </field>
     </fieldset>
-    <fieldset name="module_information" sortOrder="10">
-        <settings>
-            <label translate="true">Module details &amp; usage</label>
-            <collapsible>true</collapsible>
-            <opened>false</opened>
-        </settings>
-        <htmlContent name="information" sortOrder="21">
-            <settings>
-                <additionalClasses>
-                    <class name="html-content-class">true</class>
-                </additionalClasses>
-            </settings>
-            <block name="information_block" class="Magento\Backend\Block\Template">
-                <arguments>
-                    <argument name="template" xsi:type="string">FunkySquid_PageBuilderImgTxtSortOrder::info.phtml</argument>
-                </arguments>
-            </block>
-        </htmlContent>
-    </fieldset>
     <fieldset name="column_content" sortOrder="20">
         <settings>
             <label translate="true">Image &amp; Content</label>

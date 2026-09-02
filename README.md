@@ -11,7 +11,9 @@ When on desktop you have the choice to select the position of the image block so
 This module is great for creating more engaging layout for your clients.
 
 > [!IMPORTANT]
-> Create a folder inside app/code called **FunkySquid** and place the module in there or it won't work.
+> Open the main folder after cloned/copied and open the main folder and Create a folder inside app/code called **FunkySquid** and place
+> the inner folder for the module in there or it won't work.
+> Like this: app/code/FunkySquid/PageBuilderImgTxtSortOrder
 > Run the usual Magento commands to activate the module. 
 
 **Usage:**

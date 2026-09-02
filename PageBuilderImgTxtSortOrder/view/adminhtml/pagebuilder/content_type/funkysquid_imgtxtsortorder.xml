@@ -41,9 +41,6 @@
                         <attribute name="image_type" source="image_type" />
                         <css name="css_classes"/>
                     </element>
-                    <element name="module_information">
-                        <html name="module_information"/>
-                    </element>
                     <element name="column_content">
                         <html name="column_content"/>
                     </element>
